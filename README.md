@@ -29,7 +29,7 @@ Otras correspondencias o diferencias puedes encontrarlas en la tabla a continuac
 |if…, if…else, if…elif|if…, if…else, switch…case…default|
 |for i in range(0, 3)… |for (int i = 0; i <=3; i++)…, foreach… <sup><a href="#2">2</a></sup>|
 |while (i < 3)…|while (i < 3)…|
-|and, or, not |& y &&<sup><a href="#3">3</a></sup>, | y |<sup><a href="#3">3</a></sup>|, !|
+|and, or, not |& y &&<sup><a href="#3">3</a></sup>,\| y \|<sup><a href="#3">3</a></sup>\|, !|
 |<, <=, >, >=, ==, !=|<, <=, >, >=, ==<sup><a href="#4">4</a></sup>, !=|
 |+, -, *, /, +=, -=, *=, /=|+, -, *, /, +=, -=, *=, /=<sup><a href="#5">5</a></sup>|
 |bool|bool, Boolean<sup><a href="#6">6</a></sup>|

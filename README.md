@@ -64,7 +64,7 @@ _<sup id="1">1</sup> Los comentarios en línea que comienzan con tres /// tienen
 
 _<sup id="2">2</sup> La cláusula foreach en C# es similar a la cláusula for en Python cuando se usa con iterables.
 
-_<sup id="3">3</sup> La diferencia es si se evalúa el segundo operando. Ver https://docs.microsoft.com/en-us/dotnet/csharp/languagereference/operators/conditional-and-operator y https://docs.microsoft.com/en-us/dotnet/csharp/languagereference/operators/conditional-or-operator
+_<sup id="3">3</sup> La diferencia es si se evalúa el segundo operando. Ver https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#logical-and-operator- y https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/boolean-logical-operators#conditional-logical-and-operator-
 
 _<sup id="4">4</sup> En C# el operador == compara si dos objetos son el mismo; excepto para las instancias de la clase String, donde compara el valor. El operador == puede ser sobrescrito.
 

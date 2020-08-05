@@ -41,7 +41,7 @@ Otras correspondencias o diferencias puedes encontrarlas en la tabla a continuac
 |float(…)|Convert.ToSingle(…), Single.Parse(…)<sup><a href="#11">11</a></sup>|
 |int(…) |Convert.ToInt32(…), Int32.Parse(…)<sup><a href="#11">11</a></sup>|
 |str(…)|Int32.ToString(…), Single.ToString(…)<sup><a href="#11">11</a></sup>|
-|Cuando demo es una variable que contiene una instancia de string, demo[0]referencia el primer carácter, demo[-1] el último, demo[2:4] referencia una porción del segundo al cuarto carácter, y demo[:4] una porción del primero al cuarto carácter|Cuando demo es una variable que contiene una instancia de String, demo[0] referencia el primer carácter; no hay un equivalente en C# para acceder al último carácter<sup><a href="#12">12</a></sup> o a una porción<sup><a href="#13">13</a></sup>|
+|Cuando demo es una variable que contiene una instancia de string, demo[0]referencia el primer carácter, demo[-1] el último, demo[2:4] referencia una porción del segundo al cuarto carácter, y demo[:4] una porción del primero al cuarto carácter|Cuando demo es una variable que contiene una instancia de String, demo[0] referencia el primer carácter, demo[^0] el último, demo[1..4] referencia una porción del segundo al cuarto carácter, y demo[..4] una porción del primero al cuarto carácter.<sup><a href="#12">12</a></sup><sup><a href="#13">13</a></sup>|
 |def…|No hay un solo equivalente en C#; para los métodos la sintaxis depende de la visibilidad, si retorna un resultado o no, el tipo de datos del resultado, y otros factores.|
 |class…|class…|
 |self|this<sup><a href="#14">14</a></sup>|
@@ -82,9 +82,9 @@ _<sup id="10">10</sup> Aquí se muestra la declaración de la variable x del tip
 
 _<sup id="11">11</sup> Mientras **float()**, **int()** y **str()** son cast -conversión de tipos- en Python, los mostrados como correspondientes en C# son métodos; el concepto de cast existe en C# pero no se usa aquí como en Python.
 
-_<sup id="12">12</sup> El último carácter se accede con demo[demo.Lenght - 1].
+_<sup id="12">12</sup> Ver más del manejo de índices con C#: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes.
 
-_<sup id="13">13</sup> Una porción se obtiene con **demo.Substring(2, 2);** noten que el segundo argumento es la cantidad de caracteres y no el final de la Proción.
+_<sup id="13">13</sup> Solamente válido con netCore 3.x o superior y C# 8.0 o superior https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8.
 
 _<sup id="14">14</sup> La primera variable de un método en Python referencia al objeto que recibe el mensaje que ocasiona la ejecución de ese método, y suele llamarse **self**. En C# esa referencia se obtiene mediante la palabra clave **this**, y no es un parámetro del método
 

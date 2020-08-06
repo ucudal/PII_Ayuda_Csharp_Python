@@ -57,7 +57,7 @@ Otras correspondencias o diferencias puedes encontrarlas en la tabla a continuac
 |import |No hay un equivalente exacto en C# porque los ensamblados -análogos a los módulos o paquetes en Python- sólo pueden ser cargados dinámicamente mediante una API, a diferencia de Python que siempre son cargados dinámicamente. using es una directiva en C# que permite referenciar tipos en un espacio de nombres sin calificarlos.|
 
 En un programa de consola en C# el punto de entrada, esto es, lo primero que se ejecuta cuando se corre el programa, típicamente es un método de clase declarada como static void Main(string[] args) o static void Main(). 
-Ver https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-andcommand-args/
+Ver https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/
 
 ****
 _<sup id="1">1</sup> Los comentarios en línea que comienzan con tres /// tienen un significado especial para generar documentación externa. Ver: https://docs.microsoft.com/en-us/dotnet/csharp/codedoc

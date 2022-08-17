@@ -6,7 +6,7 @@
 
 <h1>Ayuda de C# para programadores Python</h1>
 
-Si sabes programar en Python, este documento puede servirte para saber cómo hacer en C# las cosas que ya sabes hacer. No es una referencia completa, sólo incluimos algunos aspectos de los lenguajes. 
+Si sabes programar en Python, este documento puede servirte para saber cómo hacer en C# las cosas que ya sabes hacer. No es una referencia completa, sólo incluimos algunos aspectos de los lenguajes.
 
 C# es un lenguaje <a href="https://en.wikipedia.org/wiki/Compiled_language">compilado</a> a <a href="https://en.wikipedia.org/wiki/Common_Intermediate_Language">lenguaje intermedio</a> con <a href="https://en.wikipedia.org/wiki/Type_system#STATIC">tipos de datos estáticos</a>.
 
@@ -55,8 +55,20 @@ Otras correspondencias o diferencias puedes encontrarlas en la tabla a continuac
 |assert…|Debug.Assert(…) es similar, pero se trata de una invocación y no de una palabra clave|
 |yield|La palabra clave yield, existe en C#, pero no tiene exactamente el mismo uso que en Python|
 |import |No hay un equivalente exacto en C# porque los ensamblados -análogos a los módulos o paquetes en Python- sólo pueden ser cargados dinámicamente mediante una API, a diferencia de Python que siempre son cargados dinámicamente. using es una directiva en C# que permite referenciar tipos en un espacio de nombres sin calificarlos.|
+|list = [1,2,3]|List\<int\> list = new List\<int\>([1, 2, 3])<sup><a href="#17">17</a></sup>|
+|list[0]|list[0]|
+|list.append(4)|list.Add(4)|
+|4 in list|list.Contains(4)|
+|list.remove(4)|list.Remove(4)|
+|print(list)|Console.WriteLine(String.Join(", ", list.ToArray()));|
+|dict = {"Uno": 1x,"Dos": 2,"Tres": 3}|Dictionary\<string, int\> dict = new Dictionary\<string, int\>() { {"Uno", 1}, {"Dos", 2}, {"Tres", 3}}|
+|dict[0]|dict[0]|
+|dict["Cuatro"] = 4|dict.Add("Cuatro", 4)|
+|"Uno" in dict|dict.Keys.Contains("Uno")|
+|dict.pop("Cuatro")|dict.Remove("Cuatro")|
+|print(dict)|Console.WriteLine(String.Join(", ", dict.Select(k => k.Key + ": " + k.Value)))|
 
-En un programa de consola en C# el punto de entrada, esto es, lo primero que se ejecuta cuando se corre el programa, típicamente es un método de clase declarada como static void Main(string[] args) o static void Main(). 
+En un programa de consola en C# el punto de entrada, esto es, lo primero que se ejecuta cuando se corre el programa, típicamente es un método de clase declarada como static void Main(string[] args) o static void Main().
 Ver https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/
 
 ****
@@ -91,3 +103,5 @@ _<sup id="14">14</sup> La primera variable de un método en Python referencia al
 _<sup id="15">15</sup> En C# using es tanto una directiva para importar un módulo como una sentencia para asegurar la ejecución de destructores.
 
 _<sup id="16">16</sup>  Mientras input en Python permite mostrar un mensaje además de leer un valor, `Console.ReadLine()` en C# sólo lee un valor; para mostrar un mensaje, puedes usar `Console.Write()` o `Console.WriteLine()`.
+
+_<sup id="17">17</sup> La clase `ArrayList` de C# puede contener objetos de cualquier tipo al igual que las listas de Python, sin embargo, puede ser preferible usar `List<T>` donde `T` es un nombre de clase, para tener listas que contengan objetos sólo del tipo `T`. Los ejemplos que siguen son iguales para `ArrayList` y para `List<T>`. Para usar `List<T>` es necesario incluir el espacio de nombres `System.Collections.Generic`.

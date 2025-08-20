@@ -55,7 +55,7 @@ Otras correspondencias o diferencias puedes encontrarlas en la tabla a continuac
 |assert…|Debug.Assert(…) es similar, pero se trata de una invocación y no de una palabra clave|
 |yield|La palabra clave yield, existe en C#, pero no tiene exactamente el mismo uso que en Python|
 |import |No hay un equivalente exacto en C# porque los ensamblados -análogos a los módulos o paquetes en Python- sólo pueden ser cargados dinámicamente mediante una API, a diferencia de Python que siempre son cargados dinámicamente. using es una directiva en C# que permite referenciar tipos en un espacio de nombres sin calificarlos.|
-|list = [1,2,3]|List\<int\> list = new List\<int\>([1, 2, 3])<sup><a href="#17">17</a></sup>|
+|list = [1,2,3]|List\<int\> list = new List\<int\> {1, 2, 3}<sup><a href="#17">17</a></sup>|
 |list[0]|list[0]|
 |list.append(4)|list.Add(4)|
 |4 in list|list.Contains(4)|
